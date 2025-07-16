@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Seminar Nasional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran Seminar Nasional</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName">Nama Lengkap</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap Anda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="instance">Instansi</label>
+                <input type="text" id="instance" name="instance" placeholder="Universitas/Perusahaan Anda" required>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Pilihan Topik Seminar</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Pilih Topik</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label>Metode Pembayaran</label>
+                <div class="radio-options"> <label class="radio-custom">
+                        <input type="radio" id="bankTransfer" name="paymentMethod" value="bank_transfer" required>
+                        <span class="radio-checkmark"></span> Transfer Bank
+                    </label>
+                    <label class="radio-custom">
+                        <input type="radio" id="creditCard" name="paymentMethod" value="credit_card">
+                        <span class="radio-checkmark"></span> Kartu Kredit
+                    </label>
+                    <label class="radio-custom">
+                        <input type="radio" id="eWallet" name="paymentMethod" value="e_wallet">
+                        <span class="radio-checkmark"></span> E-Wallet
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Daftar Sekarang</button>
+        </form>
+
+        <div id="notification" class="notification" style="display: none;">
+            <p id="notificationMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
